@@ -2,54 +2,7 @@
 cursos = []         # Lista de cursos
 historial = []      # Pila para registrar cambios
 solicitudes = []    # Cola de revisión
-# ===================== MENÚ PRINCIPAL =====================
-def menu():
-    while True:
-        print("\n====== GESTOR DE NOTAS ACADÉMICAS ======")
-        print("1. Registrar nuevo curso")
-        print("2. Mostrar todos los cursos y notas")
-        print("3. Calcular promedio general")
-        print("4. Contar cursos aprobados y reprobados")
-        print("5. Buscar curso por nombre (búsqueda lineal)")
-        print("6. Actualizar nota de un curso")
-        print("7. Eliminar un curso")
-        print("8. Ordenar cursos por nota (ordenamiento burbuja)")
-        print("9. Ordenar cursos por nombre (ordenamiento inserción)")
-        print("10. Buscar curso por nombre (búsqueda binaria)")
-        print("11. Simular cola de solicitudes de revisión")
-        print("12. Mostrar historial de cambios (pila)")
-        print("13. Salir")
-        opcion = input("Seleccione una opción: ")
 
-        if opcion == '1':
-            registrar_curso()
-        elif opcion == '2':
-            mostrar_cursos()
-        elif opcion == '3':
-            calcular_promedio()
-        elif opcion == '4':
-            contar_aprobados()
-        elif opcion == '5':
-            buscar_lineal()
-        elif opcion == '6':
-            actualizar_nota()
-        elif opcion == '7':
-            eliminar_curso()
-        elif opcion == '8':
-            ordenar_por_nota()
-        elif opcion == '9':
-            ordenar_por_nombre()
-        elif opcion == '10':
-            buscar_binaria()
-        elif opcion == '11':
-            simular_cola()
-        elif opcion == '12':
-            mostrar_historial()
-        elif opcion == '13':
-            print(" Gracias por usar el sistema. ¡Hasta pronto!")
-            break
-        else:
-            print(" Opción inválida. Intente nuevamente.")
 # ===================== FUNCIONES =====================
 # Opcion 1 / Registra todos los cursos que desea el usuario 
 def registrar_curso():
@@ -188,5 +141,53 @@ def mostrar_historial():
         for cambio in reversed(historial):
             print(f"- {cambio}")
 
+# ===================== MENÚ PRINCIPAL =====================
+def menu():
+    while True:
+        print("\n====== GESTOR DE NOTAS ACADÉMICAS ======")
+        print("1. Registrar nuevo curso")
+        print("2. Mostrar todos los cursos y notas")
+        print("3. Calcular promedio general")
+        print("4. Contar cursos aprobados y reprobados")
+        print("5. Buscar curso por nombre (búsqueda lineal)")
+        print("6. Actualizar nota de un curso")
+        print("7. Eliminar un curso")
+        print("8. Ordenar cursos por nota (ordenamiento burbuja)")
+        print("9. Ordenar cursos por nombre (ordenamiento inserción)")
+        print("10. Buscar curso por nombre (búsqueda binaria)")
+        print("11. Simular cola de solicitudes de revisión")
+        print("12. Mostrar historial de cambios (pila)")
+        print("13. Salir")
+        opcion = input("Seleccione una opción: ")
 
+        if opcion == '1':
+            registrar_curso()
+        elif opcion == '2':
+            mostrar_cursos()
+        elif opcion == '3':
+            calcular_promedio()
+        elif opcion == '4':
+            contar_aprobados()
+        elif opcion == '5':
+            buscar_lineal()
+        elif opcion == '6':
+            actualizar_nota()
+        elif opcion == '7':
+            eliminar_curso()
+        elif opcion == '8':
+            ordenar_por_nota()
+        elif opcion == '9':
+            ordenar_por_nombre()
+        elif opcion == '10':
+            buscar_binaria()
+        elif opcion == '11':
+            simular_cola()
+        elif opcion == '12':
+            mostrar_historial()
+        elif opcion == '13':
+            print(" Gracias por usar el sistema. ¡Hasta pronto!")
+            break
+        else:
+            print(" Opción inválida. Intente nuevamente.")
 menu()
+
